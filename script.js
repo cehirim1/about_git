@@ -13,5 +13,6 @@ enables you to take snapshots and save points by making a commit - commit create
 - git status to see the branch you're on 
 - git branch <branch name> to create new branch
 - git checkout <branch name> to go to new branch
+- branches can be used to test new features and can be gotten rid of if you don't like or merge if you do
 
 */
