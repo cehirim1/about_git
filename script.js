@@ -14,5 +14,13 @@ enables you to take snapshots and save points by making a commit - commit create
 - git branch <branch name> to create new branch
 - git checkout <branch name> to go to new branch
 - branches can be used to test new features and can be gotten rid of if you don't like or merge if you do
+    like the changes - on the master/main merge the branch 
+- all the git files are local
+- to push to cloud or github: 
+
+
+    GITHUB - remote/cloud backup of our local git repositories
+- cool backup in the cloud
+- has many tools that make it easier to work with developers
 
 */
