@@ -1,0 +1,106 @@
+/*
+Box Model Hack
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+Clear Fix Hack
+*/
+.clearfix::after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+header,
+footer {
+  height: 100px;
+  border: 2px solid black;
+  clear: both;
+}
+
+header {
+  margin-top: 30px;
+}
+
+section {
+  height: 300px;
+  width: 20%;
+  border: 2px solid black;
+  float: left;
+}
+.thickOne {
+  width: 40%;
+}
+
+/*
+- em or rem are responsive units of measurement
+- em get their font size from the parent element
+- if parent is 10 px, 1 em is same as 10px
+- the proble with em is that if we put a containing element, that's what the em will be 
+- em goes to the size of the closest element
+- rem takes care of this proble which get tehir font size from the html element size property
+- rem gets really helpful is that it helps with accessibility
+- default font size for every browser is 16px
+- stick to rems for font-sizes for fluidity and elasticity
+
+*/
+
+/*
+- we make content decisions using media queries 
+- with media queries, we achieve responsiveness
+- we go with th emobile layout first,m then add the rest
+- in mobile first, we start with all that people care about
+- use content to figure out the device width to match the queries, make sure to have the viewport
+- user scalable stops people from zooming in and out of the screen - don't do this!
+*/
+
+/* screen means 0 - btw ) & 600px*/
+@media screen and (max-width: 600px) {
+  section {
+    background: green;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  section {
+    background: skyblue;
+    width: 33.333%;
+  }
+  .thickOne {
+    display: none;
+  }
+}
+
+@media (min-width: 901px) {
+  section, .thickOne {
+    background: gold;
+  float: none;
+  width: 100%;
+  height: 150px;
+  }
+  header {
+    background: rgb(174, 167, 167);
+  }
+
+  footer {
+    background: rgb(241, 235, 235);
+  }
+}
+
+
+/*
+Flexbox is a one-D layout model
+read complete guide to
+*/
